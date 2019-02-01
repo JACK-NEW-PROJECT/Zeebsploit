@@ -6,7 +6,8 @@ import time
 ip = requests.get('https://www.myip.com').text
 prot = re.findall('id="ip">(.*?)</',ip)[0]
 u = os.uname()
-logo = """\033[92m
+try:
+    logo = """\033[92m
          00000    0000  0000  00000     0000   0000   00     000000 00 0000000
            00    00    00    00  00    00     00 00  00     00  00 00    00
           00    0000  0000  00 000    00     00000  00     00  00 00    00\033[0m
@@ -19,6 +20,9 @@ logo = """\033[92m
         uname : \033[92m{} {} {} {} {}\033[0m
         user@host : \033[91m{}\033[0m@\033[91m{}\033[0m
                  """.format(prot,u.sysname,u.nodename,u.release,u.version,u.machine,os.getlogin(),u.nodename)
+except AttributeError:
+    print('[!] This Tool Only Support For python 3')
+    sys.exit()
 
 
 
