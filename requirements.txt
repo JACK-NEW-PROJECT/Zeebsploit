@@ -2,4 +2,4 @@ prettytable
 requests
 whois
 bs4
-
+fake_useragent
