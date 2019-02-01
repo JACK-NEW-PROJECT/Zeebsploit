@@ -1,0 +1,5 @@
+prettytable
+requests
+whois
+bs4
+
