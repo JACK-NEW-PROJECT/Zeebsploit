@@ -1,5 +1,5 @@
 #-*- coding: utf-8 -*-
-import requests,re
+import requests,re,os
 from bs4 import BeautifulSoup as bs
 import urllib3
 from .sqlerror import sql_errors
@@ -40,7 +40,7 @@ class scanner:
       @property
       def xss_scan(anu):
           with requests.Session() as ses:
-               with open('wordlist/xss') as pilod:
+               with open('xss') as pilod:
                     for payload in pilod:
                         pld = payload.rstrip()
                         content = ses.get(anu.target+pld).text
@@ -67,7 +67,7 @@ class scanner:
       @property
       def adfin(anu):
           with requests.Session() as ses:
-               with open('wordlist/adm.txt') as panel:
+               with open('adm.txt') as panel:
                     for login in panel:
                         admin = login.rstrip()
                         res = ses.get(anu.target+"/"+admin)

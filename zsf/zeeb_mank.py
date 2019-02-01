@@ -41,6 +41,12 @@ def bingung():
 
 
 def main():
-    loading('[*] starting zeebsploit framework')
-    print(logo)
-    bingung()
+    if sys.version[0] == '2':
+       print('\n')
+       print('[!] This Tool Only support for python 3.x')
+       print('\n')
+       sys.exit()
+    else:
+       loading('[*] starting zeebsploit framework')
+       print(logo)
+       bingung()
