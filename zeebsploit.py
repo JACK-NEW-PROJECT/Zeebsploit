@@ -8,10 +8,6 @@ import sys,os
 from zsf.zeeb_mank import *
 print_function
 
-if sys.platform == 'win32':
-   print('This Tool only For Linux Sorry :)')
-   exit('Sorry')
-
 if sys.version[0] == '2':
    print('\n')
    print('[!] This Tool Only support for python 3.x')

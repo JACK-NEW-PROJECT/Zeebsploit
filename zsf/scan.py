@@ -40,7 +40,7 @@ class scanner:
       @property
       def xss_scan(anu):
           with requests.Session() as ses:
-               with open('xss') as pilod:
+               with open(os.getcwd()+'/zsf/xss') as pilod:
                     for payload in pilod:
                         pld = payload.rstrip()
                         content = ses.get(anu.target+pld).text
@@ -67,7 +67,7 @@ class scanner:
       @property
       def adfin(anu):
           with requests.Session() as ses:
-               with open('adm.txt') as panel:
+               with open(os.getcwd()+'/zsf/adm.txt') as panel:
                     for login in panel:
                         admin = login.rstrip()
                         res = ses.get(anu.target+"/"+admin)
