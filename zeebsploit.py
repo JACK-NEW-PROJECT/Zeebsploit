@@ -8,19 +8,25 @@ import sys,os
 from zsf.zeeb_mank import *
 print_function
 
-if sys.version[0] == '2':
-   print('\n')
-   print('[!] This Tool Only support for python 3.x')
-   print('\n')
-   sys.exit()
+if sys.version[0] in '2':
+   print('[!] Use Python 3 To Run This Tool')
 else:
-   while True:
-         beb = input('[?] Do you want to check For update ? [y/n] ').lower()
-         if beb == 'y':
-            os.system('git pull')
-            print('[!] Type python zeebsploit.py to run the tool\n')
-         elif beb == 'n':
-            main()
-         else:
-            print('[!] Type "y" or "n" only')
+   if sys.platform in ['linux','linux2']:
+       while True:
+             try:
+                 op = input('[?] Do you Want To check For update? [y/n]').lower()
+                 if 'y' in op:
+                     os.system('git pull')
+                     print('[!] Success Now type python3 zeebsploit.py')
+                     break
+                 elif 'n' in op:
+                     main()
+                 else:
+                     print('[!] Type y or n only')
+             except KeyboardInterrupt:
+                 break
+             except EOFError:
+                 break
 
+   else:
+       print('[!] Sorry This Tool only Support For Linux ')
