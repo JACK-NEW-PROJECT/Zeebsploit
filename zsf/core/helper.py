@@ -28,6 +28,7 @@ class Helper:
                              'XSS_Scanner':'Scan XSS Injection Vulnerability',
                              'LFI_Scanner':'Local File Includes Scanner etc/passwd',
                              'Admin_finder':'Scan Admin Login page',
+                             'directory_scanner':'scan directory on web use dirhunt',
                               '---More---':'Coming Soon the following version'}
 
           for dat,ls in scanner_modules.items():
@@ -45,6 +46,8 @@ class Helper:
                              'Wp_showbiz':'Wordpress Showbiz Pro shell Auto Upload',
                              'Wp_Learndash':'Wordpress Learndash shell Auto Upload',
                              'Joomla_com_fabrik':'Joomla Component_Fabrik Auto Shell Upload',
+                             'Joomla_ads_manager':'Joomla ads manager component auto shell upload',
+                             'apache_struts2_rce':'CVE: 2017-5638 - Apache Struts2 S2-045',
                              '---More---':'Coming Soon the following version'}
 
           for dat,ls in exploit_modules.items():

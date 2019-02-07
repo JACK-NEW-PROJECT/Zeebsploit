@@ -46,6 +46,8 @@ And Exploitation on a web
 |        Wp_showbiz       |             Wordpress Showbiz Pro shell Auto Upload             |
 |       Wp_Learndash      |              Wordpress Learndash shell Auto Upload              |
 |    Joomla_com_fabrik    |            Joomla Component_Fabrik Auto Shell Upload            |
+|    Joomla_ads_manager   |          Joomla ads manager component auto shell upload         |
+|    apache_struts2_rce   |              CVE: 2017-5638 - Apache Struts2 S2-045             |
 |        ---More---       |                Coming Soon the following version                |
 +-------------------------+-----------------------------------------------------------------+
 ```
