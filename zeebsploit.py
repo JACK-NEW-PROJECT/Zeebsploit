@@ -16,6 +16,7 @@ else:
                  op = input('[?] Do you Want To check For update? [y/n]').lower()
                  if 'y' in op:
                      os.system('git pull')
+                     os.system('python3 -m pip install -r requirements.txt')
                      print('[!] Success Now type "python3 zeebsploit.py"')
                      sys.exit("....")
                  elif 'n' in op:
