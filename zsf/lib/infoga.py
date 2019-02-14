@@ -29,8 +29,8 @@ class infoga:
       def hider(self):
           with requests.Session() as ses:
                ses.headers.update(infoga.agen)
-               hid = ses.get(self.Host).headers
-          return hid
+               hid = ses.get(self.Host)
+          return hid.headers,hid.text
 
       @property
       def IP_geoloc(self):
