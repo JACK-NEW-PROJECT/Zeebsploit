@@ -6,7 +6,7 @@ from .core.temp import *
 from requests.exceptions import *
 from .core.helper import Helper as help
 from . import zeeb_mank as zm
-import readline,socket,os
+import readline,socket,os,hashlib
 readline.set_pre_input_hook()
 
 campret = '[!] Type "Exit" For Exit from This Tool\n[!] Type "help" for show modules\n'
@@ -25,7 +25,7 @@ class AEX:
              has = inf(aex.tgt).detect_cms
              for dat, ls in has.items():
                  print('')
-                 print(dat+":"+str(ls))
+                 print(f"{dat}:{ls}")
           except ConnectionError:
              print(red('[x]')+'Internet Connection Error')
 
@@ -41,9 +41,11 @@ class AEX:
       @property
       def header(aex):
           try:
-             has = inf(aex.tgt).hider
+             has,has_ = inf(aex.tgt).hider
+             page_hash = hashlib.sha256(has_.encode('utf-8')).hexdigest()
+             print(f"[÷] Page Hash : {page_hash}")
              for dat,ls in has.items():
-                 print(dat+":"+ls)
+                 print(f"\t{dat}:{ls}")
           except ConnectionError:
              print(red('[x]')+' Internet Connection Error')
           except MissingSchema:
@@ -54,7 +56,7 @@ class AEX:
           try:
               has = inf(aex.tgt).IP_geoloc
               for dat,ls in has.items():
-                  print(dat+" : "+str(ls))
+                  print(f"{dat}:{ls}")
           except ConnectionError:
               print(red('[x]')+' Internet Connection Error')
 
@@ -62,11 +64,9 @@ class AEX:
       def whois(aex):
           try:
               has = inf(aex.tgt).whois
-              for dat,ls in has.items():
-                  print('')
-                  print(dat+" : "+str(ls))
-          except socket.gaierror:
-              print(red('[x]')+' Internet Connection Error')
+              print(has)
+          except Exception as e:
+              print(red('[x]')+ str(e))
 
       @property
       def extract_email(aex):
