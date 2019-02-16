@@ -1,6 +1,0 @@
-prettytable
-requests
-python-whois
-bs4
-fake_useragent
-dirhunt
