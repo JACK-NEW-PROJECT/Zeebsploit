@@ -309,9 +309,9 @@ def exploitation():
            except ConnectionError:
               print(f"\n{R}[x]{W} No Internet Connection\n")
            except ReadTimeout:
-              print("\n{R}[-]{W} Connection Timeout\n")
+              print(f"\n{R}[-]{W} Connection Timeout\n")
            except MissingSchema:
-              print("\n{Y}[!]{W} Try Start with http:// or https://\n")
+              print(f"\n{Y}[!]{W} Try Start with http:// or https://\n")
            except FileNotFoundError as e:
               print(e)
            except KeyboardInterrupt:
