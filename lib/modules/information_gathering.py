@@ -33,13 +33,9 @@ class header_information(object):
 
 class geoloc(object):
 
-      @property
-      def req(self):
-          return "http://ip-api.com/json/{}"
-
       def geo_location(self,target):
           self.target = target
-          resp = requests.get(self.req.format(self.target),headers=hider).json()
+          resp = requests.get(f"http://ip-api.com/json/{self.target}",headers=hider).json()
           for a,b in resp.items():
               print(f"{B}[+]{W} {a}: {b}")
                
@@ -62,7 +58,7 @@ class email_search(object):
           elif len(hs) == 0:
              print(f'{R}[-]{W} No Email Found')
           else:
-             print('{R}[-]{W} No Email Found')
+             print(f'{R}[-]{W} No Email Found')
 
 
 class trace(object):
