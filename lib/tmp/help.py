@@ -14,7 +14,6 @@ class Helper:
                             'email searcher':'searching email from web',
                             'traceroute':'to show the route the package has passed',
                             'robot.txt detector':'Scan Robot.txt from Web',
-                            'header information':'Response Header Checker',
                             'whois lookup':'looking for registered users or\n recipients of Internet resource rights',
                             '---More---':'Coming Soon the following version'}
           for dat,ls in infoga_modules.items():
