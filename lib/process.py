@@ -244,14 +244,12 @@ def exploitation():
                                    str(input('Url : ')),
                                    str(input('Path your file want To upload : ')),
                                    str(input('upload file with name? : '))
-                   )
+                  )
                    print('\n')
               elif xxx == 'joomla manager get config':
                    print('\n')
                    _joom.joomla_manager_get_config(
                                    str(input('Url : ')),
-                                   str(input('Path your file want To upload : ')),
-                                   str(input('upload file with name? : '))
                    )
                    print('\n')
               elif xxx == 'joomla jdownload':
