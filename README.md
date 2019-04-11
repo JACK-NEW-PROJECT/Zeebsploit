@@ -82,5 +82,4 @@ and follow instruction
 |     ---More---     |    Coming Soon the following version     |
 +--------------------+------------------------------------------+
 ```
-##### Join My Team : <a href="https://www.facebook.com/groups/1217219985083200">[Click This]</a>
 ##### Contact Me   : <a href="https://www.facebook.com/jaka.lesmana.794628">[Contact Me]</a>
