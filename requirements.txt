@@ -1,4 +1,0 @@
-bs4
-prettytable
-python-whois
-fake_useragent
