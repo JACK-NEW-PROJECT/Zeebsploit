@@ -1,0 +1,6 @@
+requests
+aiohttp==4.0.0a0
+asyncio
+bs4
+python-whois
+dirhunt
