@@ -25,6 +25,7 @@ required:
 * python-whois
 * bs4
 * dirhunt
+* colorlog
 
 #### last update:
 
