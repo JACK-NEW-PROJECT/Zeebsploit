@@ -5,3 +5,4 @@ bs4
 python-whois
 dirhunt
 colorlog
+aiofiles
