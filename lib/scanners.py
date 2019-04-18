@@ -12,7 +12,7 @@ class scan(
     _.path_scanner):
       pass
 
-logging = log_()      
+logging = log_(__name__)      
 class scanner_main(object):
 
       def url(self,x):

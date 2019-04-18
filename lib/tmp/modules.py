@@ -22,7 +22,7 @@ k = '\033[93m'
 #     -==='  '===- 
 #     '''
 
-def log_():
+def log_(kk):
     format_ = ColoredFormatter(
         '%(log_color)s%(levelname)s%(reset)s %(message)s',
         log_colors={
@@ -38,7 +38,7 @@ def log_():
     logging.addLevelName(30,'[-]')
     logging.addLevelName(40,'[x]')
     logging.addLevelName(50,'[*]')
-    logger = logging.getLogger('example')
+    logger = logging.getLogger(kk)
     handler = logging.StreamHandler()
     handler.setFormatter(format_)
     logger.setLevel(logging.DEBUG)

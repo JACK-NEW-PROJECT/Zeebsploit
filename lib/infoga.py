@@ -3,7 +3,7 @@ from .information_gathering import modules as _
 from .tmp.modules import log_,information_gathering_modules,show,description
 import whois
 
-logging = log_()
+logging = log_(__name__)
 class infoga(
     _.cms_detector,
     _.header_information,
