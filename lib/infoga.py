@@ -62,9 +62,9 @@ class infoga_main(object):
                        hasil = info.reverse(input('domain: '))
                        if hasil['status'] == 'Success':
                           for domain,_ in hasil['domainArray']:
-                              logging.log(10,f'{domain}')
+                              print(domain)
                        else:
-                          logging.log(30,'Failed: {hasil["message"]}') 
+                          logging.log(30,f'Failed: {hasil["message"]}') 
                     elif inp == mod[7]:
                        xxx = whois.whois(input('host: '))
                        print(xxx)
