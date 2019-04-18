@@ -52,7 +52,7 @@ class xss_payload_vulnerability_scanner(object):
         self.target = target
         async with aiohttp.ClientSession() as ses:
           async with aiofiles.open(f'{os.getcwd()}/lib/wordlist/xss_payload.txt',mode='r') as file:
-            tk = [self.scan(self.target,x.rstrip(),ses) for x in file]
+            tk = [self.scan(self.target,x.rstrip(),ses) async for x in file]
             await asyncio.gather(*tk)
       
       def start_scan(self,target):
