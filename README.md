@@ -3,7 +3,7 @@
 
 <img src="lib/tmp/Zeebsploit.png" width="250" height="250">
 
-#### Installation 
+#### Installation
 ```
 $ apt-get install git python
 $ git clone https://github.com/jaxBCD/Zeebsploit.git
@@ -15,6 +15,21 @@ $ * and follow instruction
 * exploits 14
 * scanners 10
 * footprinting 8
+
+
+#### Docker Build
+
+ ```
+ $ docker build -t xshuden/zeebsploit .
+ ```
+
+#### Docker Usage
+
+ ```
+ $ docker run --rm -it xshuden/zeebsploit
+ $ docker run --rm -it -v '$(pwd):/tmp/' xshuden/zeebsploit
+ ```
+
 
 ##### requirements:
 
@@ -34,7 +49,3 @@ new:
 * adjustment version
 * fix error
 * add new modules
-  
-
-
-
