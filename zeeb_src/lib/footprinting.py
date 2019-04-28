@@ -57,7 +57,7 @@ class footprinting_handler(object):
 
       @classmethod
       def server(cls,r):
-          return r.headers.get('Server')
+          return r.headers.get('server')
 
       @classmethod
       def x_powered(cls,r):
