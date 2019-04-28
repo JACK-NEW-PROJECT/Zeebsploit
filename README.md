@@ -1,7 +1,7 @@
 ![Zeebsploit|framework](https://img.shields.io/badge/Zeebsploit-Framework-orange.svg)
 ![python|3.x](https://img.shields.io/badge/python-3.x-blue.svg)
 
-<img src="lib/tmp/Zeebsploit.png" width="250" height="250">
+<img src="zeeb_src/utils/Zeebsploit.png" width="250" height="250">
 
 #### Installation
 ```
@@ -12,9 +12,9 @@ $ python -m pip install -r requirements.txt
 $ python zsf.py
 $ * and follow instruction
 ```
-* exploits 14
-* scanners 10
-* footprinting 8
+* exploits 17
+* scanners 11
+* footprinting 10
 
 
 #### Docker Build
@@ -44,8 +44,8 @@ required:
 
 #### last update:
 
-<br>wed, 12 apr 2019<br>
+<br>wed, 28 apr 2019<br>
 new:
-* adjustment version
+* update version to 1.1
 * fix error
 * add new modules
