@@ -23,7 +23,7 @@ def main():
           try:
               inp = input('zsf(\033[91mscanner\033[0m): ').lower()
               if inp == mod[0]:
-                 x = sub_enum(no_proto('domain: '))
+                 x = sub_enum(no_proto(input('domain: ')))
                  log.log(10,'mapping subdomain...')
                  x.DNSdumpster()
                  for i in x.raw_result:
