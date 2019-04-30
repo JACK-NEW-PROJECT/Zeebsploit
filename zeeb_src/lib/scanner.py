@@ -1,3 +1,4 @@
+
 #-*- coding: utf-8 -*-
 import asyncio,aiohttp,requests,os,urllib3,aiofiles,re
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -17,7 +18,7 @@ class subdomain_enumeration(object):
             self.url,
             data={
                 'csrfmiddlewaretoken':token,
-                'domain':self.domain
+                'targetip':self.domain
             },
             cookies={
                 'csrftoken':token
@@ -27,7 +28,7 @@ class subdomain_enumeration(object):
                 'Referer':self.url
             }            
           )
-          subdo = re.findall('http://(.+?)"',post.text)
+          subdo = re.findall('http://(.*?)"',post.text)
           for x in subdo:
               self.dns_dumpster.append(x)
               
