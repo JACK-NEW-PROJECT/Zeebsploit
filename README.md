@@ -2,6 +2,7 @@
 ![python|3.x](https://img.shields.io/badge/python-3.x-blue.svg)
 - 2021: I hope someone can rebuild my tool
 - 2022: whyyy??
+- 2023 : THIS PROJECT WILL BE CLOSED 
 
 
 
