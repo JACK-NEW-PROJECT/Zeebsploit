@@ -8,19 +8,6 @@
 
 <img src="zeeb_src/utils/Zeebsploit.png" width="250" height="250">
 
-#### Installation
-```
-$ apt-get install git python
-$ git clone https://github.com/jaxBCD/Zeebsploit.git
-$ cd Zeebsploit
-$ python -m pip install -r requirements.txt
-$ python zsf.py
-$ * and follow instruction
-```
-* exploits 17
-* scanners 11
-* footprinting 10
-
 
 #### Docker Build
 
